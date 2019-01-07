@@ -1,0 +1,23 @@
+<!-- Create a html page to display a simple slider by using JS-->
+<html>
+<head>
+<script>
+var myimages=["images/a.jpg","images/b.jpg","images/c.jpg"];
+var imgno=0;
+function moveSlider()
+{
+var im=document.getElementById("imgslide");
+im.src=myimages[imgno];
+imgno++;
+if(imgno==myimages.length)
+{
+imgno=0;
+}
+window.setTimeout("moveSlider()",2000);
+}
+</script>
+</head>
+<body onload="moveSlider()">
+<img id="imgslide" src="kajol1.jpg" width="1000px" height="250px"/>
+</body>
+</html>
